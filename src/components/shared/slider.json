@@ -7,11 +7,13 @@
   },
   "options": {},
   "attributes": {
-    "files": {
+    "Images": {
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

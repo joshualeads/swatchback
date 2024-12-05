@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_colors",
+  "info": {
+    "displayName": "Color"
+  },
+  "options": {},
+  "attributes": {
+    "Colors": {
+      "type": "enumeration",
+      "enum": [
+        "Black",
+        "White",
+        "Blue",
+        "Green",
+        "Red"
+      ]
+    }
+  }
+}

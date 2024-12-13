@@ -1,0 +1,11 @@
+For Strapi Updates Always use 
+// Get Strapi Version 
+
+npx @strapi/upgrade -V
+
+npx @strapi/upgrade major --dry
+npx @strapi/upgrade minor --dry
+npx @strapi/upgrade patch --dry
+npx @strapi/upgrade latest --dry
+
+

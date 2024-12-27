@@ -537,7 +537,6 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
-    description: '';
     displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';
@@ -559,11 +558,11 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
-    Media: Schema.Attribute.Component<'shared.slider', false>;
-    Mode: Schema.Attribute.Enumeration<['Active', 'Draft']>;
+    Media: Schema.Attribute.Component<'shared.media', false>;
+    Mode: Schema.Attribute.Enumeration<['Active ', 'Draft']>;
     publishedAt: Schema.Attribute.DateTime;
     Tags: Schema.Attribute.String;
-    Title: Schema.Attribute.String;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
     Type: Schema.Attribute.Relation<'oneToOne', 'api::vendor.vendor'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -593,7 +592,6 @@ export interface ApiVendorVendor extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Name: Schema.Attribute.String;
-    product: Schema.Attribute.Relation<'oneToOne', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -4,8 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Product",
-    "description": ""
+    "displayName": "Product"
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Description": {
       "type": "richtext"
@@ -21,24 +21,22 @@
     "Mode": {
       "type": "enumeration",
       "enum": [
-        "Active",
+        "Active ",
         "Draft"
       ]
     },
     "Media": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.slider"
+      "component": "shared.media"
     },
     "Handle": {
-      "type": "string",
-      "unique": false
+      "type": "string"
     },
     "Type": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::vendor.vendor",
-      "inversedBy": "product"
+      "target": "api::vendor.vendor"
     },
     "Tags": {
       "type": "string"

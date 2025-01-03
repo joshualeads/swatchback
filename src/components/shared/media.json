@@ -9,7 +9,7 @@
   "attributes": {
     "Images": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",

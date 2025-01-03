@@ -31,7 +31,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
-    Images: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    Images: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
   };
 }
 

@@ -537,6 +537,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
+    description: '';
     displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';

@@ -1,3 +1,5 @@
+const schemaGraphql = require("../src/extensions/graphql/config/schema.graphql");
+
 module.exports = ({ env }) => ({
   upload: {
     config: {
@@ -25,6 +27,7 @@ module.exports = ({ env }) => ({
         tracing: false,
       },
       v4CompatibilityMode: true,
+      Schema: schemaGraphql,
     },
   },
 });

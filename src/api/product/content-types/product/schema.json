@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Mode": {
+      "type": "enumeration",
+      "enum": [
+        "Active ",
+        "Draft"
+      ]
+    },
+    "Media": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.media"
+    },
+    "Handle": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor"
+    },
+    "Tags": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
+    },
+    "GroupCode": {
+      "type": "string"
+    }
+  }
+}

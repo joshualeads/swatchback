@@ -1,5 +1,3 @@
-const { register } = require("../src");
-
 module.exports = ({ env }) => ({
   upload: {
     config: {
